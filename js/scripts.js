@@ -16,6 +16,17 @@ $(document ).ready(function() {
     $("form#deposit").find("input").val("");
   }
 
+  $('input#withdrawal-amount').on('input', function() {
+    var userInput = parseInt($('input#withdrawal-amount').val());
+    if (userInput > account.balance) {
+      $("#go-button").hide();
+      $("#no-button").show();
+    } else {
+      $("#no-button").hide();
+      $("#go-button").show();      
+    }
+  });
+
   $("form#add-account").submit(function(event) {
     event.preventDefault();
     var name = $("input#name").val();

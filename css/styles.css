@@ -1,14 +1,13 @@
 body {
-  background: url("http://www.andermatt-swissalps.ch/fileadmin/user_upload/Location/Andermatt/Back_Andermatt.jpg") no-repeat center center fixed; 
+  background: url("http://www.andermatt-swissalps.ch/fileadmin/user_upload/Location/Andermatt/Back_Andermatt.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 
-#jqtest {
-  background-color: black;
-  color: white;
+#no-button {
+  display: none;
 }
 
 #page-header {
