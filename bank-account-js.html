@@ -46,7 +46,7 @@
                     <label for="initial-deposit">Första insättning</label>
                     <div class="input-group">
                       <div class="input-group-addon">CHF</div>
-                      <input type="number" name="initial-deposit" id="initial-deposit" class="form-control" required>
+                      <input type="number" min="0" name="initial-deposit" id="initial-deposit" class="form-control" required>
                       <div class="input-group-addon">.00</div>
                     </div>
                   </div>
@@ -69,11 +69,11 @@
                   <label for="deposit-amount">Deponera:</label>
                   <div class="input-group">
                     <div class="input-group-addon">CHF</div>
-                    <input type="number" name="deposit-amount" id="deposit-amount" class="form-control" required>
+                    <input type="number" min="0" name="deposit-amount" id="deposit-amount" class="form-control" required>
                     <div class="input-group-addon">.00</div>
                   </div>
                 </div>
-                <button type="submit" class="btn btn-primary">Deponera!</button>
+                <button type="submit" class="btn btn-success">Deponera!</button>
               </form>
 
               <br>
@@ -83,17 +83,17 @@
                   <label for="withdrawl-amount">Uttag:</label>
                   <div class="input-group">
                     <div class="input-group-addon">CHF</div>
-                    <input type="number" name="withdrawal-amount" id="withdrawal-amount" class="form-control" required>
+                    <input type="number" min="0" name="withdrawal-amount" id="withdrawal-amount" class="form-control" required>
                     <div class="input-group-addon">.00</div>
                   </div>
                 </div>
                 <div id="no-button">
                   <fieldset disabled>
-                    <button type="submit" class="btn btn-primary">Uttag!</button>
+                    <button type="submit" class="btn btn-danger">Uttag!</button>
                   </fieldset>
                 </div>
                 <div id="go-button">
-                  <button type="submit" class="btn btn-primary">Uttag!</button>
+                  <button type="submit" class="btn btn-danger">Uttag!</button>
                 </div>
               </form>
             </div>
