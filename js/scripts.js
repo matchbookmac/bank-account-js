@@ -57,8 +57,9 @@ $(document ).ready(function() {
     account.deposit(deposit);
     updateBalance();
     var date = new Date();
-    $("table#history").append('<tr> <td>' + date.toLocaleString() + '</td> <td> +' + deposit.toString() + ' CHF</td> <td>' + (account.balance).toString() + ' CHF</td> </tr>');
+    $("table#history").append('<tr class="success"> <td>' + date.toLocaleString() + '</td> <td> +' + deposit.toString() + ' CHF</td> <td>' + (account.balance).toString() + ' CHF</td> </tr>');
     clearForms();
+    $("#history-panel").show();
   });
 
   $("form#withdraw").submit(function(event) {
@@ -67,8 +68,9 @@ $(document ).ready(function() {
     account.withdraw(withdrawal);
     updateBalance();
     var date = new Date();
-    $("table#history").append('<tr> <td>' + date.toLocaleString() + '</td> <td> -' + withdrawal.toString() + ' CHF</td> <td>' + (account.balance).toString() + ' CHF</td> </tr>');
+    $("table#history").append('<tr class="danger"> <td>' + date.toLocaleString() + '</td> <td> -' + withdrawal.toString() + ' CHF</td> <td>' + (account.balance).toString() + ' CHF</td> </tr>');
     clearForms();
+    $("#history-panel").show();
   });
 
 

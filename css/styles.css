@@ -35,3 +35,7 @@ th {
 td {
   text-align: center;
 }
+
+#history-panel {
+  display: none;
+}
