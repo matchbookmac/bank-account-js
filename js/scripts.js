@@ -8,7 +8,7 @@ $(document ).ready(function() {
 
   function updateBalance() {
     $("#balance").empty();
-    $("#balance").append("Balans: " + (account.balance).toString());
+    $("#balance").append('<h2 class="text-center">' + "Balans: " + (account.balance).toString() + '</h2>');
   }
 
   function clearForms() {

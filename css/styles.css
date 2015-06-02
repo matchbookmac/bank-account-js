@@ -1,4 +1,19 @@
+body {
+  background-image: url("http://blogs.reuters.com/great-debate/files/2014/05/box555.jpg");
+  background-size: auto;
+}
+
 #jqtest {
   background-color: black;
   color: white;
+}
+
+#page-header {
+  margin-top: 50px;
+  padding-top: 0px;
+}
+
+#page-title {
+  margin: 0px;
+  padding-bottom: 21px;
 }
