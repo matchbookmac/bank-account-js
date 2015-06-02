@@ -56,6 +56,8 @@ $(document ).ready(function() {
     var deposit = parseInt($("input#deposit-amount").val());
     account.deposit(deposit);
     updateBalance();
+    var date = new Date();
+    $("table#history").append('<tr> <td>' + date.toLocaleString() + '</td> <td> +' + deposit.toString() + ' CHF</td> <td>' + (account.balance).toString() + ' CHF</td> </tr>');
     clearForms();
   });
 
@@ -64,6 +66,8 @@ $(document ).ready(function() {
     var withdrawal = parseInt($("input#withdrawal-amount").val());
     account.withdraw(withdrawal);
     updateBalance();
+    var date = new Date();
+    $("table#history").append('<tr> <td>' + date.toLocaleString() + '</td> <td> -' + withdrawal.toString() + ' CHF</td> <td>' + (account.balance).toString() + ' CHF</td> </tr>');
     clearForms();
   });
 

@@ -23,3 +23,15 @@ body {
   margin: 0px;
   padding-bottom: 21px;
 }
+
+th {
+  text-align: center;
+}
+
+#history-header {
+  margin-bottom: 0px;
+}
+
+td {
+  text-align: center;
+}
