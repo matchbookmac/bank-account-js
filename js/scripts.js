@@ -21,6 +21,8 @@ $(document ).ready(function() {
     var name = $("input#name").val();
     var initialDeposit = parseInt($("input#initial-deposit").val());
     account = new BankAccount(name, initialDeposit);
+    $("#title").empty();
+    $("#title").append('<h1 class="text-center" id="title">Välkommen Till Banken, ' + account.name + '!</h1>');
     updateBalance();
     clearForms();
   });
