@@ -1,6 +1,9 @@
 body {
-  background-image: url("http://blogs.reuters.com/great-debate/files/2014/05/box555.jpg");
-  background-size: auto;
+  background: url("http://www.andermatt-swissalps.ch/fileadmin/user_upload/Location/Andermatt/Back_Andermatt.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 #jqtest {
