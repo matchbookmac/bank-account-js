@@ -8,12 +8,23 @@ $(document ).ready(function() {
 
   function updateBalance() {
     $("#balance").empty();
-    $("#balance").append('<h2 class="text-center">' + "Balans: " + (account.balance).toString() + '</h2>');
+    $("#balance").append('<h2 class="text-center">' + "Balans: " + formatAmount(account.balance) + ' CHF</h2>');
   }
 
   function clearForms() {
     $("form#add-account").find("input").val("");
     $("form#deposit").find("input").val("");
+  }
+
+  function formatAmount(amount) {
+    amount = amount.toString().split('').reverse();
+    for(var i = 0; i < amount.length; i++) {
+      if(i != 0 && i % 3 === 0) {
+        amount[i] = amount[i] + ",";
+      }
+    }
+    amount = amount.reverse().join('');
+    return amount;
   }
 
   $('input#withdrawal-amount').on('input', function() {
@@ -23,7 +34,7 @@ $(document ).ready(function() {
       $("#no-button").show();
     } else {
       $("#no-button").hide();
-      $("#go-button").show();      
+      $("#go-button").show();
     }
   });
 
@@ -34,6 +45,8 @@ $(document ).ready(function() {
     account = new BankAccount(name, initialDeposit);
     $("#title").empty();
     $("#title").append('<h1 class="text-center" id="title">Välkommen Till Banken, ' + account.name + '!</h1>');
+    $("#bank").hide();
+    $("#account").show();
     updateBalance();
     clearForms();
   });
