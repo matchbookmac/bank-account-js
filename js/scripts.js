@@ -6,6 +6,15 @@
 $(document ).ready(function() {
   var account;
 
+  var bgArray = ["http://www.freedomofresearch.org/sites/default/files/Mountains-Switzerland-Bernese-Oberland-High-Resolution-Wallpapers.jpg",
+                "https://d1k976m6pd0u9m.cloudfront.net/public/media/55350468e1944.jpg",
+                "http://www.capitalfm.co.ke/lifestyle/files/2014/08/switzerland.jpg",
+                "http://yourtripideas.com/wp-content/uploads/2015/04/Switzerland-newholidays-besttravel.jpg",
+                "http://www.indulgentvacations.com/wp-content/uploads/2014/04/Nature-Landscapes-Tour-Switzerland1.jpg",
+                "http://www.andermatt-swissalps.ch/fileadmin/user_upload/Location/Andermatt/Back_Andermatt.jpg"];
+  var bg = bgArray[Math.floor(Math.random() * bgArray.length)];
+  $('body').css({'background-image': 'url(' + bg + ')'});
+
   function updateBalance() {
     $("#balance").empty();
     $("#balance").append('<h2 class="text-center">' + "Balans: " + formatAmount(account.balance) + ' CHF</h2>');
