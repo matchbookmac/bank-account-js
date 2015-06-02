@@ -40,25 +40,38 @@
         </form>
       </div>
 
-
       <div id="account" class="col-md-6">
+
         <h2 class="text-center" id="balance"></h2>
 
         <h3 class="text-center">Sätta in eller ta ut pengar:</h3>
 
         <form id="deposit">
           <div class="form-group">
-            <label for="name">Deponera:</label>
+            <label for="deposit-amount">Deponera:</label>
             <div class="input-group">
               <div class="input-group-addon">CHF</div>
               <input type="text" name="deposit-amount" id="deposit-amount" class="form-control" autofocus>
               <div class="input-group-addon">.00</div>
             </div>
           </div>
-          <button type="submit" class="btn btn-primary">Lämna!</button>
+          <button type="submit" class="btn btn-primary">Deponera!</button>
+        </form>
+
+        <br>
+
+        <form id="withdraw">
+          <div class="form-group">
+            <label for="withdrawl-amount">Uttag:</label>
+            <div class="input-group">
+              <div class="input-group-addon">CHF</div>
+              <input type="text" name="withdrawal-amount" id="withdrawal-amount" class="form-control" autofocus>
+              <div class="input-group-addon">.00</div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Uttag!</button>
         </form>
       </div>
-
 
     </div>
   </body>
